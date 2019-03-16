@@ -1,0 +1,34 @@
+package com.app.pojos;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="student")
+public class Student {
+
+	private int id;
+	private String name;
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	@Column(length=20)
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Student() {
+		super();
+	}
+
+	
+	
+	
+	
+}
